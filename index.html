@@ -1,193 +1,457 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADLANDER - Portfólio </title>
+
+    <title>Freelancer Serviços - BADLANDER</title>
+
     <style>
-        :root {
-            --primary: #00aaff;
-            --background: #0d0d0d;
-            --surface: #1a1a1a;
-            --text: #ffffff;
-            --accent: #0077cc;
-            --gold: #c9a93f;
-        }
 
         body {
+
+            font-family: Arial, sans-serif;
+
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--background);
-            color: var(--text);
+
+            padding: 0;
+
+            background-color: #1a1a1a;
+
+            color: #fff;
+
+            overflow-x: hidden;
+
         }
 
         header {
-            background: linear-gradient(135deg, var(--surface), #000);
-            padding: 50px 20px;
+
+            background-color: #000;
+
+            padding: 20px;
+
             text-align: center;
-            box-shadow: 0 0 15px #000;
+
+            position: relative;
+
+            overflow: hidden;
+
         }
 
         header h1 {
-            color: var(--primary);
-            font-size: 3rem;
+
+            color: #ffd700;
+
             margin: 0;
-            animation: fadeInDown 1.2s ease;
+
+            font-size: 3rem;
+
+            animation: fadeInDown 2s;
+
         }
 
         header p {
-            font-size: 1.2rem;
-            color: #bbb;
-            animation: fadeInUp 1.2s ease;
+
+            animation: fadeInUp 2s;
+
         }
 
         nav {
-            background-color: #111;
-            padding: 15px 0;
+
+            background-color: #333;
+
+            padding: 10px;
+
             text-align: center;
+
             position: sticky;
+
             top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+            z-index: 1000;
+
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
         }
 
         nav a {
-            color: var(--primary);
-            margin: 0 20px;
+
+            color: #ffd700;
+
+            margin: 0 15px;
+
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
+
+            font-weight: bold;
+
+            font-size: 1.2rem;
+
             transition: color 0.3s ease;
+
         }
 
         nav a:hover {
-            color: var(--text);
+
+            color: #fff;
+
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
+
+            padding: 20px;
+
         }
 
-        section {
-            margin-bottom: 80px;
-            animation: fadeIn 1s ease;
+        .section {
+
+            margin-bottom: 50px;
+
+            animation: fadeIn 1.5s;
+
         }
 
         h2 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
 
-        p, li {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #ccc;
+            color: #ffd700;
+
+            font-size: 2.5rem;
+
+            margin-bottom: 10px;
+
         }
 
         ul {
-            padding-left: 20px;
+
+            list-style-type: none;
+
+            padding: 0;
+
         }
 
-        li {
-            margin-bottom: 10px;
-        }
+        ul li {
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: var(--primary);
-            color: #000;
-            padding: 12px 25px;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
+            margin: 10px 0;
 
-        .button:hover {
-            background-color: var(--gold);
-            color: #000;
+            font-size: 1.2rem;
+
         }
 
         footer {
-            background-color: #111;
-            color: #999;
+
+            background-color: #000;
+
+            color: #fff;
+
             text-align: center;
-            padding: 20px 10px;
-            font-size: 0.9rem;
+
+            padding: 10px;
+
+            position: relative;
+
+            bottom: 0;
+
+            width: 100%;
+
+            animation: fadeInUp 2s;
+
+        }
+
+        .contact {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
         }
 
         .contact a {
-            color: var(--primary);
+
+            color: #ffd700;
+
             text-decoration: none;
+
+            margin-top: 5px;
+
         }
 
-        .contact a:hover {
-            text-decoration: underline;
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            max-width: 400px;
+
+            margin: 0 auto;
+
+            animation: fadeInUp 2s;
+
+        }
+
+        form input, form textarea, form button {
+
+            margin: 10px 0;
+
+            padding: 10px;
+
+            border: 1px solid #333;
+
+            border-radius: 5px;
+
+        }
+
+        form button {
+
+            background-color: #ffd700;
+
+            border: none;
+
+            color: #000;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+
+        }
+
+        form button:hover {
+
+            background-color: #fff;
+
+            color: #000;
+
+        }
+
+        @media (max-width: 768px) {
+
+            h1 {
+
+                font-size: 2.5rem;
+
+            }
+
+            h2 {
+
+                font-size: 2rem;
+
+            }
+
+            nav a {
+
+                font-size: 1rem;
+
+                margin: 0 10px;
+
+            }
+
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
+
+            from { opacity: 0; transform: translateY(20px); }
+
             to { opacity: 1; transform: translateY(0); }
+
         }
+
+
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
+
+            from { opacity: 0; transform: translateY(50px); }
+
             to { opacity: 1; transform: translateY(0); }
+
         }
 
+
+
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-40px); }
+
+            from { opacity: 0; transform: translateY(-50px); }
+
             to { opacity: 1; transform: translateY(0); }
+
         }
+
+
+
+        .button {
+
+            display: inline-block;
+
+            background-color: #ffd700;
+
+            color: #000;
+
+            padding: 10px 20px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: background-color 0.3s ease, transform 0.3s ease;
+
+        }
+
+
+
+        .button:hover {
+
+            background-color: #fff;
+
+            transform: scale(1.1);
+
+        }
+
+
+
+        /* Animation for header background */
+
+        header::after {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: -50%;
+
+            width: 200%;
+
+            height: 100%;
+
+            background: linear-gradient(120deg, #ffd700, transparent);
+
+            animation: slideBg 3s linear infinite;
+
+            opacity: 0.1;
+
+        }
+
+
+
+        @keyframes slideBg {
+
+            from { transform: translateX(0); }
+
+            to { transform: translateX(50%); }
+
+        }
+
     </style>
+
 </head>
+
 <body>
 
     <header>
-        <h1>BADLANDER</h1>
-        <p>Design de Alto Nível, Criação de Conteúdo & Bots Inteligentes</p>
+
+        <h1>Freelancer Serviços - BADLANDER</h1>
+
+        <p>Trabalhos de freelancing, mídia e gestão de redes sociais</p>
+
     </header>
 
+
+
     <nav>
-        <a href="#sobre">Sobre</a>
+
+        <a href="#sobre">Sobre Mim</a>
+
         <a href="#servicos">Serviços</a>
+
         <a href="#contato">Contato</a>
+
     </nav>
 
+
+
     <div class="container">
-        <section id="sobre">
+
+        <section id="sobre" class="section">
+
             <h2>Sobre Mim</h2>
-            <p>Sou um criador digital focado em soluções criativas e personalizadas para marcas e pessoas. Trabalho com design de qualidade, vídeos impactantes, automações e bots que otimizam a comunicação digital. Tudo com estética e eficiência premium.</p>
-        </section>
 
-        <section id="servicos">
-            <h2>Habilidades & Serviços</h2>
-            <ul>
-                <li>Design visual profissional</li>
-                <li>Edição de vídeos para redes sociais e projetos</li>
-                <li>Criação de conteúdo criativo e estratégico</li>
-                <li>Desenvolvimento de bots (como para WhatsApp)</li>
-            </ul>
+            <p>Sou um freelancer especializado em mídia digital e gestão de redes sociais. Meu objetivo é ajudar empresas e indivíduos a alavancarem sua presença online com conteúdos criativos e estratégicos. Trabalho com dedicação para garantir resultados eficazes.</p>
+
             <a href="#contato" class="button">Entre em Contato</a>
+
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Vamos trabalhar juntos? Me chama!</p>
-            <div class="contact">
-                <p>WhatsApp: <a href="tel:+258853948834">+258 85 394 8834</a></p>
-                <p>Email: <a href="mailto:badlandereditz@gmail.com">badlandereditz@gmail.com</a></p>
-            </div>
+
+
+        <section id="servicos" class="section">
+
+            <h2>Meus Serviços</h2>
+
+            <ul>
+
+                <li>Gestão de conteúdo de mídia</li>
+
+                <li>Criação de edits para redes sociais (TikTok)</li>
+
+                <li>Aulas básicas de HTML e CSS</li>
+
+            </ul>
+
         </section>
+
+
+
+        <section id="contato" class="section">
+
+            <h2>Contato</h2>
+
+            <div class="contact">
+
+                <p>Telefone: <a href="tel:+258853948834">+258 85 394 8834</a></p>
+
+                <p>Email: <a href="mailto:badlandereditz@gmail.com">badlandereditz@gmail.com</a></p>
+
+            </div>
+
+
+
+            <form>
+
+                <h3>Envie uma mensagem</h3>
+
+                <input type="text" placeholder="Seu Nome" required>
+
+                <input type="email" placeholder="Seu Email" required>
+
+                <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+
+        </section>
+
     </div>
 
+
+
     <footer>
-        <p>&copy; 2025 BADLANDER - Todos os direitos reservados.</p>
+
+        <p>&copy; 2025 Freelancer Serviços - BADLANDER - Todos os direitos reservados.</p>
+
     </footer>
 
+<form action="https://formsubmit.co/badlandereditz@gmail.com" method="POST">
+
 </body>
-</html>
+
+    </html>
